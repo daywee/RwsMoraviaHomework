@@ -9,6 +9,8 @@ namespace Moravia.Homework.DocumentConverter.Serializers
 {
     public class JsonDocumentSerializer : ISerializer<Document>
     {
+        public FileType FileType => FileType.Json;
+
         public async Task<Document> DeserializeAsync(Stream stream)
         {
             return await JsonSerializer.DeserializeAsync<Document>(stream);

@@ -5,6 +5,7 @@ namespace Moravia.Homework.DocumentConverter.Abstractions
 {
     public interface ISerializer<T>
     {
+        public FileType FileType { get; }
         Task<T> DeserializeAsync(Stream stream);
         Task SerializeAsync(Stream stream, T @object);
     }

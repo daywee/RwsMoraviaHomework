@@ -14,6 +14,8 @@ namespace Moravia.Homework.DocumentConverter.Serializers
         private const string TitleElement = "Title";
         private const string TextElement = "Text";
 
+        public FileType FileType => FileType.Xml;
+
         public async Task<Document> DeserializeAsync(Stream stream)
         {
             var tokenSource = new CancellationTokenSource();
