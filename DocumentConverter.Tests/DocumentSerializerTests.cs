@@ -15,7 +15,7 @@ namespace Moravia.Homework.DocumentConverter.Tests
     {
         [Theory]
         [ClassData(typeof(DocumentSerializers))]
-        public async Task CanNew(ISerializer<Document> serializer)
+        public async Task CanSerializeDeserialize(ISerializer<Document> serializer)
         {
             var stream = new MemoryStream();
 
